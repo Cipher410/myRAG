@@ -1,0 +1,181 @@
+{
+  "filename": "AAAI‘25_FriendsQA A New Large-Scale Deep Video Understanding Dataset with Fine-grained Topic Categorization for Story Videos.pdf",
+  "total_chunks": 19,
+  "total_pages": 0,
+  "loading_method": "unstructured",
+  "chunking_method": "by_headings",
+  "timestamp": "2026-06-05T19:08:39.429584",
+  "chunks": [
+    {
+      "content": "!School of Computer Science, Wuhan University, China\n\n2School of Cyber Science and Engineering, Wuhan University, China\n\n3National Engineering Research Center for Multimedia Software, Wuhan University, China 4Hubei Key Laboratory of Multimedia and Network Communication Engineering, Wuhan University, China {2023202110068, 2020300004016, 2019300003083, cxxiao, cliang } @whu.edu.cn, wzy_hope@163.com",
+      "metadata": {
+        "title": "Zhenggian Wu'>#*, Ruizhe Li'3#*, Zijun Xu?>4, Zhongyuan Wang'>**, Chunxia Xiao'>**, Chao Liang'\">347",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Factoid VideoQA (NExT-QA)\n\nVideo question answering (VideoQA) aims to answer nat- ural language questions according to the given videos. Al- though existing models perform well in the factoid VideoQA task, they still face challenges in deep video understanding (DVU) task, which focuses on story videos. Compared to factoid videos, the most significant feature of story videos is storylines, which are composed of complex interactions and long-range evolvement of core story topics including char- acters, actions and locations. Understanding these topics re- quires models to possess DVU capability. However, existing DVU datasets rarely organize questions according to these story topics, making them difficult to comprehensively as- sess VideoQA models’ DVU capability of complex story- lines. Additionally, the question quantity and video length of these dataset are limited by high labor costs of handcrafted dataset building method. In this paper, we devise a large language model based multi-a...(内容过长已截断)",
+      "metadata": {
+        "title": "Abstract",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Video question answering (VideoQA) aims to answer natu- ral language questions based on given videos, supporting ad- vanced applications like video grounding (Ren et al. 2024) and video chatbots (Jin et al. 2024). Early researches on fac- toid VideoQA focus on questions about actions or objects in videos (Yu et al. 2019). With the popularity of video lan- guage model (VLM) and multimodal large language model\n\n*These authors contributed equally.\n\n\"Chao Liang is the corresponding author.\n\nCopyright © 2025, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved.\n\nHowever, VideoQA models’ performance significantly declines on deep video understanding (DVU) task. For in- stance, VideoChat2 achieves 61.70% accuracy on the factoid NEXT-QA dataset but drops to 44.05% on our DVU Friend- sQA dataset. As illustrated in Figure 1, the key reasons in- clude: First, regarding question attributes, in addition to per- ception questions that inquire about visual c...(内容过长已截断)",
+      "metadata": {
+        "title": "Introduction",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "fmmmmmmn Metadata Data Preparation 18 Question Generation ¥ Question Filtration I é Feedbnck. R — Forens) =t} €\\ Question Generator k’ Database } Difficulty Measure Question Information aQ = H ] 2 8 5 ] = -8 2 <3 = 5 ) ' Balanced Y-m 'ﬂm ) ' \" Length Difficulty i o G aD ! |1 Reviewerl Reviewer2 ! [ | [ @ Content Difficulty | ! | [ Difficulty Score ! | 1 Drop Retain. !\n\nFigure 3: The workflow diagram of the multi-agent collaboration framework StoryMind.\n\nIn summary, our contributions are three-fold:\n\n* We devise StoryMind, a LLM-based multi-agent collab- oration framework to automatically generate and review large-scale questions with diverse fine-grained topics.\n\n2018, 2020; Song et al. 2024; Curtis et al. 2020) do not orga- nize questions based on story topics. This phenomenon indi- cates existing datasets are difficult to provide a comprehen- sive evaluation of the VideoQA models’ capability of DVU.\n\n* We construct FriendsQA, a large-scale DVU dataset comprising 44.6K questions with ...(内容过长已截断)",
+      "metadata": {
+        "title": "'https://aistudio.google.com/",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "In this section, we briefly overview the VideoQA datasets, encompassing factoid VideoQA and DVU datasets.",
+      "metadata": {
+        "title": "Related Work",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "In addition, As shown in Table 1, some DVU datasets con- tain a large number of questions but are paired with short videos less than 5 minute, e.g., TVQA (Lei et al. 2018). Conversely, the other datasets encompass long videos (ap- proximately 90 minutes). e.g. HLVU (Curtis et al. 2020). Recently, the DVU 2022 (Curtis et al. 2022) and DVU 2023 (Curtis et al. 2023) grand challenges? have comprehensively addressed on HLVU dataset. Nevertheless, These datasets often have a limited number of questions. For example, HLVU and DeepMaven (Fung et al. 2023) have fewer than 1K questions, and the largest, MovieChat-1K (Song et al. 2024), has only 19K questions. It hinders the evaluation of the model’s understanding of storylines in terms of both breadth and depth simultaneously.\n\nFactoid VideoQA dataset (Xu et al. 2017; Yu, Kim, and Kim 2018; Garcia et al. 2020; Li et al. 2020; Yang et al. 2021; Mangalam, Akshulakov, and Malik 2023) mainly focus on simple visual fact in short-range, such as object...(内容过长已截断)",
+      "metadata": {
+        "title": "Factoid VideoQA Datasets",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Story videos, such as TV shows, are composed of complex interactions and long-range evolvement of core story topics. Understanding these topics requires models to possess deep video understanding (DVU) capability. Early work, such as PororoQA (Kim et al. 2017), focused on scene-dialog story- telling without complex storylines. Recent research has in- creasingly shifted towards understanding complex storylines in story video. However, as illustrated in Figure 2, the major- ity of current DVU datasets (Tapaswi et al. 2016; Lei et al.\n\nTo reduce the labor costs, we propose StoryMind, a multi- agent collaboration framework. It can automatically gener- ate large-scale questions with conprehensive and balanced fine-grained topics. As shown in Figure 3, it mainly consists of four stages, data preparation, question generation, ques- tion filtration and difficulty measure.",
+      "metadata": {
+        "title": "DVU Datasets",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "The data preparation phase is responsible for converting the metadata into video information.",
+      "metadata": {
+        "title": "Data Preparation",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "0 Information Scene: 1, Location: Central Perk s 1L e s (el s Chandie, Jocy, Phocbe, and Momica arethere, — (y 1 yyop o 00:49-00:52) Monica: There's nothing t N ( ) Monica: There's nothing to Monica are there. tell. It's just some guy I work with. (00:49-00:52) Monica: There's (00:52-00:55) Joey: Come on. You're going nothing to tell. It's just some guy [ out with a guy. . work with. Boundingbox: Joey: [687, 114, 1297, 1319] Insert > (00:52-00:55) Joey: Come on. You're going out with a guy. Cha’l;f;c!rerl:l{ﬂecﬂogllition & Detection\n\nFigure 4: The flowchart of data preparation.\n\nMetadata The script and episode video represent the tex- tual structure and visual presentation of the storyline, respec- tively. Therefore, we use them as the metadata for question generation. The script from PAINS dataset (Niu et al. 2023) contains multiple scenes, with each scene detailing the loca- tion, the main characters involved, and aligning the dialogue with the video timeline, as shown in Figure 4. I...(内容过长已截断)",
+      "metadata": {
+        "title": "0 Information",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "The question generation stage aims to produce questions with diverse and balanced fine-grained topics. We intro- duce Gemini 1.5 Pro as generator and prompt the genera- tor with video information, descriptions of the fine-grained topics and questions examples, as illustrated in Figure 5(a). Video information is the output of data preparation stage that record the script, timeline, and character positions. De- scriptions of the fine-grained topic contains the description of 2 attributions (P, I) and 7 topics (C, A, L, CA, CL, AL and CAL). Questions examples include manually designed examples for each fine-grained topic to assist the genera- tor in better understanding the fine-grained topics. All of\n\n*We choose 4 episodes because the scripts from 4 episodes reach the generator’s context limit.\n\n{Question: At the beginning of Scend; e 1\" what ae the characters doing at {System: You are an expert in long story |, LZMh_, | Central Perk? i video comprehension. i Choices: o = \\ Generator | [...(内容过长已截断)",
+      "metadata": {
+        "title": "Question Generation",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Question filtration aims to filter out incorrect questions. We introduce Gemini 1.5 Pro and Claude 3.5 Sonnet* as two reviewers to automate the process. The prompt is meticu- lously designed for them as shown in Figure 6 (For complete prompt, please refer to Appendix B.2), which mainly con- sists of three parts, video information, generated questions and relevant requirements. Video information is the output of data preparation. It ensures reviews to be on the same\n\nhttps:/claude.ai/\n\n! Chandler, Joey, Phoebe, and Monica are there. ! (00:49-00:52) Monica: There's nothing to tell. It's just some guy I work with. i Question: At the beginning of Scene 1, what are the i characters doing at Central Perk? { Choices: [Drinking coffee and talking, Eating lunch an ! discussing work, Playing games and listening to music, of the above]; Refain question question Relevant requiremen i[Rule 1, Rule 2\n\nFigure 6: The flowchart of question filtration.\n\n(a) Length difficulty (7)) Relevant: 00'49&)05'07 ...(内容过长已截断)",
+      "metadata": {
+        "title": "Question Filtration",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Difficulty measure aims to assign a difficulty score to each question to better assess the DVU capabilities of VideoQA models (Zhang et al. 2022). We propose 2 difficulty factors, i.e., video length and content. Let |V,}| and |V}’| denote the length of the whole video and relevant video for i-th ques- tion. |C | and |C%| denote the instance (including charac- ters and locations obtained from video information) number of the whole video and relevant video to represent content. Therefore, we define 2 difficulty scores:\n\n« Length difficulty (o] = [V;}|/|Vi]). It represent the re- lationship of length between whole video and relevant video as shown in Figure 7(a). Larger value indicates\n\nSingle Cross Dataset Manul Revision ——— ———— #Num Ratio #Num Ratio FriendsQA-S1 X X 3,795 100% 995 100% FriendsQA-M w/o R. v X 3475 91.57% 894 89.85% FriendsQA-M v v 3,584 94.44% 905 90.95%\n\nTable 2: Comparison of datasets on first season in different filtration and type. w/o R. indicates revison are not i...(内容过长已截断)",
+      "metadata": {
+        "title": "Difficulty Measure",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Manual Verification Before presenting the dataset statis- tics, we assess the quality of the FriendsQA generated by the StoryMind. This evaluation ensures the validity of subse- quent evaluation. Therefore, we first select 4,790 questions from the first season (denoted as FriendsQA-S1) and apply the same requirements as in the previous “Question Filtra- tion” and manually revise questions with incorrect options (e.g., the correct answer is A but B is selected). In the sub- sequent experiments, we use the manually verified dataset with revision (denoted as FriendsQA-M).\n\nManual v.s. Automatic The comparisons between FriendsQA-M and FriendsQA-S1 are shown in Table 2. For single-episode questions, 91.57% are retained directly with- out revision (denoted as FriendsQA w/o R.), and 94.44% are retained with revision. For cross-episode questions, these figures are 89.85% and 90.95%, respectively. Furthermore,\n\nC CAL & - &\n\nFigure 8: The distribution of fine-grained topics.\n\nwe conduct analysis...(内容过长已截断)",
+      "metadata": {
+        "title": "Dataset Quality",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Dataset Scale We applied StoryMind to the classic sitcom Friends, which contains 234 episodes with average length of 1358s. It leads to a large-scale dataset, FriendsQA, with over 44.6K questions, covering 14 fine-grained topics. The num- ber of single-episode and cross-episode questions are 35,222 and 9,470, respectively, in approximately a 4:1 ratio. Exam- ples for 14 fine-grained topic in FriendsQA are elaborated in Appendix C.\n\nFine-grained Topic As illustrated in Figure 8, The pro- portion of P and I questions is nearly 50%, and for specific topics, like the CL with the lowest proportion of I questions, it still accounts for 10.9%. This indicates that the questions are evenly distributed across the 14 fine-grained topics. The distribution is the same for single and cross-episode ques- tion, which is detailed in Appendix D.\n\nDifficulty Finally, to facilitate the analysis of results in conjunction with question difficulty, we sort the questions in ascending order of difficulty score...(内容过长已截断)",
+      "metadata": {
+        "title": "Dataset Statistics",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Baseline We benchmark 10 SOTA models over the past two years and categorize these models into two groups:\n\n* MLLM models including Chat-Univi (Jin et al. 2024), MA-LMM (He et al. 2024), MovieChat (Song et al. 2024), SeViLA (Yu et al. 2023), TimeChat (Ren et al. 2024), Video-ChatGPT (Maaz et al. 2024), VideoChat2 (Li et al. 2024), VideoLLaMA2(Cheng et al. 2024). Ex- cept for SeViLA, which uses FlanT5-XL 3B (Chung et al. 2022) as backbone, all other MLLM models, use various versions of the LLaMA model (Touvron et al.\n\nEasy Medium Hard P-C P-C 5 P-C LCAL PA L.CAL P-A LCAL P-A 1AL P-L I-AL P-L LAL P.L I-CL P-CA I-CL P-CA ICL P-CA LCA P-CL 1.CA P-CL I-CA p-CL LL P-AL . L P-AL L P-AL LA -C P-CAL LA P-CAL 1A P-CAL - I-C I-c [0.2,0.4,06,0.8, 1.0] [24,2.6,2.8,3.0,3.2] [5,7,9, 11,13]\n\nFigure 9: Overall difficulty score on different levels. The numbers in [-] are coordinate values for each circle.\n\nLength difficulty Length difficulty Content difficulty 0.36 0.34 0.30 0.28 0.27 0.32 -0.30 Overall ...(内容过长已截断)",
+      "metadata": {
+        "title": "Setting",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "MLLM v.s. VLM Table 4 shows an overall result of 10 models. By comparing MLLM models and VLM models, we find most MLLM models achieve better performance. This may be due to the fact that MLLMs utilize LLM as backbone, having greater language comprehension abil- ity. Furthermore, extensive language pre-training may have brought more prior knowledge of reasoning to MLLM.\n\nAttribution As shown in Table 4 that the accuracy of P questions is significantly lower than I questions for each model. We calculate the length difficulty o; and content dif- ficulty o, of both question types. Figure 10(a) shows that P questions get higher overall difficulty, consistent with the\n\nACC (%)\n\nMLLM VLM Att. Top. AVG Chat-UniVi MA-LMM MovieChat ~ SeViLA TimeChat Video-ChatGPT VideoChat2 VideoLLaMA2 VIOLETv2 Vid-TLDR C 2627/23.85 29.84/35.90 17.76/21.24 35.87/40.75 18.07/1528 15.82/17.52 2353/30.31 28.87/44.47 2671/22.11 2133/22.61 24.41/27.40 A 2577/41.79 30.47/3648 24.51/22.06 39.19/27.03 19.26/17.41 2539/2...(内容过长已截断)",
+      "metadata": {
+        "title": "Evaluation Result",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "In this paper, we devise StoryMind, a LLM-based multi- agent collaboration framework to automatically generate large-scale dataset, FriendsQA, with fine-grained topics. FriendsQA builds upon the core C, A, and L story topics of stories with a large number of questions. We conduct com- prehensive evaluation on FriendsQA and believe that it will guide the development of VideoQA methods.\n\nTopic By Comparing the accuracy of C, A, L within P and I in Table 4, We find that models exhibit lower accuracy on questions involving C. Furthermore, this trend is reinforced by comparing the accuracy of CA, CL, and AL topics within the P. This issue may stems from the model’s weakness in character recognition. Unlike traditional facial recognition, in this experiment, we do not provide an additional facial registration database. The model must infer characters by integrating visual content with subtitles, making character recognition a challenging task in this context. However, this pattern is not ent...(内容过长已截断)",
+      "metadata": {
+        "title": "Conclusion and Future Work",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "This work is supported by the National Natural Science Foundation of China (No. 62372339, 62371350, 62372336) and the Ministry of Education Industry-University Co- operative Education Project (No. 240700006245501, 220800006041043, 202102246004, 202002142012). The numerical calculations in this paper have been done on the supercomputing system in the Supercomputing Center of ‘Wauhan University.",
+      "metadata": {
+        "title": "Acknowledgements",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    },
+    {
+      "content": "Ammanabrolu, P.; Cheung, W.; Broniec, W.; and Riedl, M. O. 2021. Automated Storytelling via Causal, Common- sense Plot Ordering. Proceedings of the AAAI Conference on Artificial Intelligence, 35(7): 5859-5867.\n\nChen, M.; Chu, Z.; Wiseman, S.; and Gimpel, K. 2021. Summscreen: A dataset for abstractive screenplay summa- rization. arXiv preprint arXiv:2104.07091.\n\nCheng, Z.; Leng, S.; Zhang, H.; Xin, Y.; Li, X.; Chen, G.; Zhu, Y.; Zhang, W.; Luo, Z.; Zhao, D.; and Bing, L. 2024. VideoLLaMA 2: Advancing Spatial-Temporal Mod- eling and Audio Understanding in Video-LLMs. arXiv preprint arXiv:2406.07476.\n\nChoi, J.; Lee, S.; Chu, J.; Choi, M.; and Kim, H. J. 2024. vid-TLDR: Training Free Token Merging for Light-weight Video Transformer. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 18771-18781.\n\nChung, H. W.; Hou, L.; Longpre, S.; Zoph, B.; Tay, Y.; Fe- dus, W.; Li, E.; Wang, X.; Dehghani, M.; Brahma, S.; Web- son, A.; Gu, S. S.; Dai, Z.; Suzgun, ...(内容过长已截断)",
+      "metadata": {
+        "title": "References",
+        "heading_level": 1,
+        "parent_title": "",
+        "chunk_type": "heading"
+      }
+    }
+  ]
+}

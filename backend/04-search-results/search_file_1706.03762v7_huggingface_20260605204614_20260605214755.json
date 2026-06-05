@@ -1,0 +1,49 @@
+{
+  "query": "What roles do Encoder and Decoder play in the Transformer",
+  "collection_id": "file_1706.03762v7_huggingface_20260605204614",
+  "timestamp": "2026-06-05T21:47:55.512015",
+  "results": [
+    {
+      "text": "The Transformer follows this overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder and decoder, shown in the left and right halves of Figure 1, respectively.",
+      "score": 0.7130937685643416,
+      "metadata": {
+        "source": "1706.03762v7.pdf",
+        "page": "0",
+        "chunk": "14",
+        "total_chunks": 61,
+        "page_range": "0",
+        "embedding_provider": "huggingface",
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "embedding_timestamp": "2026-06-05T20:38:14.980112"
+      }
+    },
+    {
+      "text": "The Transformer uses multi-head attention in three different ways:\n\n• In \"encoder-decoder attention\" layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder. This allows every position in the decoder to attend over all positions in the input sequence. This mimics the typical encoder-decoder attention mechanisms in sequence-to-sequence models such as [38, 2, 9].\n\n• The encoder contains self-attention layers. In a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder. Each position in the encoder can attend to all positions in the previous layer of the encoder.",
+      "score": 0.6472336123910539,
+      "metadata": {
+        "source": "1706.03762v7.pdf",
+        "page": "0",
+        "chunk": "22",
+        "total_chunks": 61,
+        "page_range": "0",
+        "embedding_provider": "huggingface",
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "embedding_timestamp": "2026-06-05T20:38:16.117847"
+      }
+    },
+    {
+      "text": "Decoder: The decoder is also composed of a stack of N = 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization. We also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.",
+      "score": 0.5603753188398753,
+      "metadata": {
+        "source": "1706.03762v7.pdf",
+        "page": "0",
+        "chunk": "16",
+        "total_chunks": 61,
+        "page_range": "0",
+        "embedding_provider": "huggingface",
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "embedding_timestamp": "2026-06-05T20:38:15.256311"
+      }
+    }
+  ]
+}
